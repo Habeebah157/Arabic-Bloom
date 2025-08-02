@@ -1,5 +1,6 @@
 from flask import Blueprint, jsonify
 from app.services.utils import get_app_status
+from app.services.utils import load_words
 
 main = Blueprint('main', __name__)
 api = Blueprint('api', __name__, url_prefix='/api')
@@ -15,3 +16,7 @@ def home():
 @main.route('/about')
 def about():
     return 'This is the about page.'
+
+@main.route('/load-words')
+def load_words(): 
+    return load_words()

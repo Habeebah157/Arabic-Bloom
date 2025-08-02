@@ -1,5 +1,5 @@
 import os
-WORDS_FILE = "arabic_words.json"
+WORDS_FILE = "../arabic_bloom_api/arabic_words.json"
 import json
 def get_app_status():
     return {'status': 'ok', 'message': 'API is running', 'version': '1.0.0'}
